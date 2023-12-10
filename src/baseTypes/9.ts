@@ -4,9 +4,9 @@ import { StringLiteral } from "../../../node_modules/typescript/lib/typescript";
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
 type Status = "open" | "close";
-type Date = {
-  createAt: object;
-  updateAt: object;
+type DateType = {
+  createAt: Date;
+  updateAt: Date;
 };
 
 type Page = {
@@ -14,7 +14,7 @@ type Page = {
   likes: number;
   accounts: string[];
   status: Status;
-  details?: Date;
+  details?: DateType;
 };
 
 let page1: Page = {
